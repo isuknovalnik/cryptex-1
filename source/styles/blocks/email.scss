@@ -1,0 +1,81 @@
+.email {
+  
+  @media (min-width: $w700) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 206px;
+    height: 31px;
+  }
+  
+  &__link {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #83949d;
+    transition: all 0.3s ease-in-out;
+    
+    @media (min-width: $w700) {
+      position: relative;
+      width: 160px;
+      height: 20px;
+      padding-top: 9px;
+      font-size: 11px;
+      text-align: center;
+      color: $email-text;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(to right, $gradient-start, $gradient-end);
+      background-size: 162px 31px;
+    }
+    
+    &:hover {
+      color: $footer-email-hvr;
+      
+      @media (min-width: $w700) {
+        opacity: 0.8;
+        color: $email-text;
+      }
+    }
+    
+    &:after {
+      position: absolute;
+      z-index: 1;
+      display: none;
+      content: '';
+      top: 9px;
+      right: -6px;
+      width: 0px;
+      height: 0px;
+      border-right: none;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 6px solid $gradient-end;
+      transition: all 0.3s ease-in-out;
+      
+      @media (min-width: $w700) {
+        display: block;
+      }
+    }
+    
+    &:hover:after {
+      opacity: 0.8;
+    }
+  }
+  
+  &__symbol {
+    display: none;
+    
+    @media (min-width: $w700) {
+      display: block;
+      width: 21px;
+      height: 21px;
+    }
+  }
+}

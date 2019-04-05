@@ -1,0 +1,229 @@
+.earn-card {
+  display: block;
+  width: 308px;
+  height: 321px;
+  margin: 0 auto;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center 93px;
+  border: 1px solid $earn-card-border;
+  
+  @media (min-width: $w700) {
+    width: 471px;
+    height: 490px;
+    background-position: center 144px;
+    border: 2px solid $earn-card-border;
+  }
+  
+  @media (min-width: $w960) {
+    margin: 0;
+    border: 2px solid $earn-card-border;
+  }
+  
+  &_1 {
+    background-image: url('../images/earn1.svg');
+    background-size: 91px 65px;
+    border-bottom: none;
+    
+    @media (min-width: $w700) {
+      background-size: 139px 99px;
+      border-bottom: none;
+    }
+  }
+  
+  &_2 {
+    background-image: url('../images/earn2.svg');
+    background-size: 56px 51px;
+    background-position: center 103px;
+    border-bottom: none;
+    
+    @media (min-width: $w700) {
+      background-size: 86px 79px;
+      background-position: center 162px;
+      border-bottom: none;
+    }
+    
+    @media (min-width: $w960) {
+      border-left: none;
+      border-right: none;
+    }
+    
+    @media (min-width: $w1420) {
+      max-width: 472px;
+      background-position: 188px 162px;
+    }
+  }
+  
+  &_3 {
+    background-image: url('../images/earn3.svg');
+    background-size: 79px 48px;
+    background-position: center 94px;
+    
+    @media (min-width: $w700) {
+      background-size: 121px 74px;
+      background-position: center 158px;
+    }
+  }
+  
+  &__upper-wrap {
+    height: 235px;
+    border-bottom: 1px solid $earn-card-border;
+    
+    @media (min-width: $w700) {
+      height: 358px;
+      border-bottom: 2px solid $earn-card-border;
+    }
+  }
+  
+  &__title {
+    padding-top: 37px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    color: $earn-card-title;
+    
+    @media (min-width: $w700) {
+      padding-top: 55px;
+      font-size: 21px;
+    }
+  }
+  
+  &__number {
+    width: 17px;
+    height: 12px;
+    margin-top: 118px;
+    margin-left: 37px;
+    padding-top: 5px;
+    font-size: 8px;
+    font-weight: 700;
+    text-align: center;
+    color: $dark-section-text;
+    background-color: $earn-number;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    
+    @media (min-width: $w700) {
+      width: 26px;
+      height: 20px;
+      margin-top: 183px;
+      margin-left: 78px;
+      padding-top: 6px;
+      font-size: 13px;
+    }
+  }
+  
+  &__lower-wrap {
+    width: 305px;
+    height: 82px;
+    border-top: 3px solid $earn-lower-color;
+    border-left: 3px solid $earn-lower-color;
+    
+    @media (min-width: $w700) {
+      max-width: 468px;
+      width: calc(100% - 3px);
+      height: 127px;
+    }
+  }
+  
+  &_1 &__lower-wrap {
+    background-color: $earn1-lower-back;
+  }
+  
+  &_2 &__lower-wrap {
+    background-color: $earn2-lower-back;
+    
+    @media (min-width: $w1420) {
+      max-width: 469px;
+      width: 469px;
+    }
+  }
+  
+  &_3 &__lower-wrap {
+    background-color: $earn3-lower-back;
+  }
+  
+  &__comp {
+    margin-top: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: $earn-lower-color;
+    
+    @media (min-width: $w700) {
+      margin-top: 35px;
+      font-size: 15px;
+    }
+  }
+  
+  &__descr {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    font-size: 8px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    color: $earn-lower-color;
+    
+    @media (min-width: $w700) {
+      margin-top: 26px;
+      font-size: 12px;
+    }
+  }
+  
+  &__cpu {
+    margin-right: 9px;
+    border-bottom: 1px solid $earn1-text-border;
+    
+    @media (min-width: $w700) {
+      margin-right: 18px;
+      border-bottom: 2px solid $earn1-text-border;
+    }
+
+  }
+  
+  &_2 &__cpu {
+    border-bottom: 1px solid $earn2-text-border;
+    
+    @media (min-width: $w700) {
+      border-bottom: 2px solid $earn2-text-border;
+    }
+  }
+  
+  &_3 &__cpu {
+    border-bottom: 1px solid $earn3-text-border;
+    
+    @media (min-width: $w700) {
+      border-bottom: 2px solid $earn3-text-border;
+    }
+  }
+  
+  &__video {
+    margin-left: 9px;
+    border-bottom: 1px solid $earn1-text-border;
+    
+    @media (min-width: $w700) {
+      margin-left: 18px;
+      border-bottom: 2px solid $earn1-text-border;
+    }
+  }
+  
+  &_2 &__video {
+    border-bottom: 1px solid $earn2-text-border;
+    
+    @media (min-width: $w700) {
+      border-bottom: 2px solid $earn2-text-border;
+    }
+  }
+  
+  &_3 &__video {
+    border-bottom: 1px solid $earn3-text-border;
+    
+    @media (min-width: $w700) {
+      border-bottom: 2px solid $earn3-text-border;
+    }
+  }
+  
+}
+

@@ -1,0 +1,211 @@
+.how-card {
+  display: block;
+  max-width: 380px;
+  width: 310px;
+  height: 318px;
+  margin: 0 auto;
+  margin-bottom: 11px;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-color: $section-back;
+
+  @media (min-width: $w700) {
+    min-width: 189px;
+    width: calc(33% - 12px);
+    height: 442px;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-bottom: 0;
+  }
+  
+  @media (min-width: $w960) {
+    width: calc(33% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  @media (min-width: $w1320) {
+    margin: 0;
+  }
+  
+  &_1 {
+    background-image: url('../images/step1.svg');
+    background-size: 68px 69px;
+    background-position: center 83px;
+    
+    @media (min-width: $w700) {
+      background-size: 94px 96px;
+      background-position: center 120px;
+    }
+  }
+  
+  &_2 {
+    background-image: url('../images/step2.svg');
+    background-size: 74px 47px;
+    background-position: center 92px;
+    
+    @media (min-width: $w700) {
+      width: calc(34% - 12px);
+      background-size: 91px 57px;
+      background-position: center 135px;
+    }
+    
+    @media (min-width: $w960) {
+      width: calc(34% - 20px);
+    }
+  }
+  
+  &_3 {
+    margin-bottom: 88px;
+    background-image: url('../images/step3.svg');
+    background-size: 65px 73px;
+    background-position: center 80px;
+    
+    @media (min-width: $w700) {
+      margin-bottom: 0;
+      background-size: 87px 93px;
+      background-position: center 120px;
+    }
+  }
+  
+  &__number {
+    padding-top: 24px;
+    padding-left: 24px;
+    font-size: 13px;
+    font-weight: 700;
+    color: $how-card-text;
+    
+    @media (min-width: $w700) {
+      padding-top: 44px;
+      padding-left: 36px;
+      font-size: 16px;
+    }
+  }
+  
+  &__text {
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    padding-top: 138px;
+    padding-bottom: 44px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 600;
+    text-align: center;
+    color: $how-card-text;
+    border-bottom: 1px solid $how-card-border;
+    
+    @media (min-width: $w700) {
+      width: 80%;
+      height: 88px;
+      padding-top: 187px;
+      padding-bottom: 32px;
+      padding-left: 10%;
+      padding-right: 10%;
+      font-size: 14px;
+      line-height: 22px;
+    }
+    
+    @media (min-width: $w820) {
+      font-size: 16px;
+      line-height: 28px;
+      height: 84px;
+      padding-bottom: 36px;
+    }
+  }
+  
+  &_1 &__text {
+    width: 200px;
+    padding-left: 55px;
+    padding-right: 55px;
+    
+    @media (min-width: $w700) {
+      width: 80%;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+      
+    @media (min-width: $tablet) {
+      width: 66%;
+      padding-left: 17%;
+      padding-right: 17%;
+    }
+  }
+  
+  &__step {
+    width: 120px;
+    margin-left: 100px;
+    padding-top: 21px;
+    font-size: 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $light-text;
+    
+    @media (min-width: $w700) {
+      padding-top: 29px;
+      margin: 0 auto;
+      font-size: 12px;
+    }
+    
+    @media (min-width: $w1420) {
+      width: auto;
+      margin: 0;
+      margin-left: 126px;
+    }
+  }
+  
+  &__number-symbol {
+    margin-left: 8px;
+    fill: $how-card-number-symbol;
+    
+    @media (min-width: $w700) {
+      margin-left: 12px;
+    }
+    
+    &_1 {
+      width: 8px;
+      height: 9px;
+      
+      @media (min-width: $w700) {
+        width: 9px;
+        height: 11px;
+      }
+    }
+    
+    &_2 {
+      width: 7px;
+      height: 7px;
+      
+      @media (min-width: $w700) {
+        width: 10px;
+        height: 10px;
+      }
+    }
+    
+    &_3 {
+      width: 8px;
+      height: 7px;
+      
+      @media (min-width: $w700) {
+        width: 12px;
+        height: 10px;
+      }
+    }
+  }
+  
+  &__step-symbol {
+    width: 6px;
+    height: 8px;
+    margin-right: 9px;
+    fill: $how-card-step-symbol;
+    
+    @media (min-width: $w700) {
+      width: 8px;
+      height: 9px;
+      margin-right: 10px;
+    }
+  }
+}
+

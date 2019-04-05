@@ -1,0 +1,82 @@
+.provide-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 296px;
+  width: 100%;
+  max-width: 636px;
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  background-color: $page-color;
+  border: 2px solid $todo-card-border;
+  
+  @media (min-width: $w700) {
+    flex-direction: row;
+    min-height: 121px;
+    margin: 0 auto 25px;
+  }
+  
+  @media (min-width: $w1420) {
+    margin: 0;
+  }
+  
+  &__step-wrap {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: $todo-step-back;
+    border-top: 3px solid $todo-step;
+    border-left: 3px solid $todo-step;
+    border-right: 3px solid $todo-step;
+    
+    @media (min-width: $w700) {
+      justify-content: center;
+      flex-basis: 99px;
+      flex-shrink: 0;
+      width: 99px;
+      height: 118px;
+      border-right: none;
+    }
+  }
+  
+  
+  &__step {
+    margin-left: 10px;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $todo-step;
+    border-bottom: 3px solid $todo-step-border;
+    
+    @media (min-width: $w700) {
+      margin-left: 0;
+    }
+  }
+  
+  &__text {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 300;
+    color: $section-text;
+    
+    @media (min-width: $w700) {
+      width: 406px;
+      height: 85px;
+      padding-left: 26px;
+      padding-right: 32px;
+      padding-top: 36px;
+      padding-bottom: 0;
+      border-left: 2px solid $todo-card-border;
+    }
+  }
+  
+  &__intro {
+    font-weight: 600;
+    color: $todo-intro;
+  }
+}
+

@@ -1,0 +1,105 @@
+.todo-card {
+  display: flex;
+  min-width: 292px;
+  width: calc(100% - 28px);
+  max-width: 345px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: $page-color;
+  border: 1px solid $todo-card-border;
+  border-bottom: none;
+  
+  @media (min-width: $w700) {
+    max-width: 568px;
+    min-height: 121px;
+    margin: 0;
+    margin-bottom: 25px;
+    border: 2px solid $todo-card-border;
+  }
+  
+  &:last-of-type {
+    margin-bottom: 20px;
+    border-bottom: 1px solid $todo-card-border;
+    
+    @media (min-width: $w700) {
+      margin-bottom: 6px;
+      border-bottom: 2px solid $todo-card-border;
+    }
+  }
+  
+  &__step-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 101px;
+    background-color: $todo-step-back;
+    border-top: 2px solid $todo-step;
+    border-left: 2px solid $todo-step;
+    
+    @media (min-width: 410px) {
+      height: 84px;
+    }
+  
+    @media (min-width: $w700) {
+      flex-basis: 99px;
+      flex-shrink: 0;
+      width: 99px;
+      height: 118px;
+      border-top: 3px solid $todo-step;
+      border-left: 3px solid $todo-step;
+    }
+  }
+  
+  
+  &__step {
+    font-size: 8px;
+    line-height: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $todo-step;
+    border-bottom: 2px solid $todo-step-border;
+    
+    @media (min-width: $w700) {
+      font-size: 12px;
+      line-height: 15px;
+      border-bottom: 3px solid $todo-step-border;
+    }
+  }
+  
+  &__text {
+    width: calc(100% - 32px);
+    padding: 16px;
+    margin: 0;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
+    color: $section-text;
+    border-left: 1px solid $todo-card-border;
+    
+    @media (min-width: $w700) {
+      width: 406px;
+      height: 85px;
+      padding-left: 26px;
+      padding-right: 32px;
+      padding-top: 36px;
+      padding-bottom: 0;
+      font-size: 16px;
+      line-height: 25px;
+      border-left: 2px solid $todo-card-border;
+    }
+  }
+  
+  &:nth-child(n+3) &__text {
+    @media (min-width: $w700) {
+      height: 98px;
+      padding-top: 23px;
+    }
+  }
+  
+  &__intro {
+    font-weight: 600;
+    color: $todo-intro;
+  }
+}
+

@@ -1,0 +1,151 @@
+.header-text {
+  display: block;
+  margin-top: 6px;
+  color: $dark-section-text;
+  
+  &_light {
+    color: $header-light-main-text;
+  }
+  
+  &__intro-wrap {
+    display: block;
+    margin-top: 88px;
+    margin-bottom: 22px;
+    
+    @media (min-width: $w700) {
+      display: flex;
+      align-items: center;
+      margin-top: 0;
+      margin-bottom: 34px;
+    }
+  }
+  
+  &_light &__intro-wrap {
+    color: $header-light-text;
+  }
+  
+  .header_job &__intro-wrap {
+    margin-top: 40px;
+    
+    @media (min-width: $w700) {
+      margin-top: 0;
+    }
+  }
+  
+  &__intro-label-mob {
+    display: block;
+    width: 119px;
+    height: 27px;
+    margin: 0 auto;
+    padding-top: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 119px 37px;
+    background-image: url('../images/intro-mob.png');
+
+    @media (min-width: $w700) {
+      display: none;
+    }
+  }
+
+  &__intro-label {
+    display: none;
+
+    @media (min-width: $w700) {
+      display: block;
+      width: 130px;
+      height: 23px;
+      padding-top: 10px;
+      margin-right: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      text-align: center;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 130px 33px;
+      background-image: url('../images/intro-outline.png');
+    }
+  }
+  
+  &__intro {
+    display: none;
+    
+    @media (min-width: $w700) {
+      display: block;
+      padding-top: 0;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 300;
+      }
+  }
+  
+  &__main {
+    max-width: 1030px;
+    width: calc(100% - 48px);
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 60px;
+    font-size: 18px;
+    line-height: 31px;
+    font-weight: 300;
+    text-align: center;
+    
+    @media (min-width: $w700) {
+      width: auto;
+      margin: 0;
+      margin-bottom: 60px;
+      font-size: 32px;
+      line-height: 50px;
+      text-align: left;
+    }
+    
+    @media (min-width: $w960) {
+      margin-bottom: 124px;
+      padding-right: 40px;
+      font-size: 40px;
+      line-height: 68px;
+    }
+    
+    @media (min-width: $w1420) {
+      padding: 0;
+    }
+  }
+
+  &__no-mob {
+    display: none;
+    
+    @media (min-width: $w700) {
+      display: inline;
+      }
+  }
+  
+  .header_job &__main {
+    margin-bottom: 30px;
+    
+    @media (min-width: $w960) {
+      margin-bottom: 68px;
+    }
+  }
+  
+  &__bold {
+    font-weight: 600;
+  }
+  
+  &__symbol {
+    display: block;
+    width: 100%;
+    margin-top: 14px;
+    fill: $header-text-symbol;
+
+    @media (min-width: $w700) {
+      display: inline-block;
+      width: auto;
+      margin-top: 0;
+      margin-left: 24px;
+      margin-bottom: -4px;
+    }
+  }
+}

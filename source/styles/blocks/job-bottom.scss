@@ -1,0 +1,30 @@
+.job-bottom {
+  display: block;
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 600;
+  color: $text-color;
+  
+  @media (min-width: $w960) {
+    font-size: 32px;
+    line-height: 58px;
+  }
+
+  @media (min-width: $tablet) {
+    padding-right: 40px;
+  }
+
+  @media (min-width: $w1200) {
+    padding: 0;
+  }
+  
+  &__link {
+    text-decoration: none;
+    color: $job-link;
+    transition: all 0.3s ease-in-out;
+    
+    &:hover {
+      color: $gradient-start-hvr;
+    }
+  }
+}

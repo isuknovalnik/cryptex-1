@@ -1,0 +1,324 @@
+.footer {
+  width: 100%;
+  color: $dark-section-text;
+  background-color: $dark-section-back;
+
+  @media (min-width: $tablet) {
+    min-height: 730px;
+  }
+  
+  &__upper-box {
+    max-width: $hd;
+    min-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    
+    @media (min-width: $tablet) {
+      min-height: 566px;
+    }
+  }
+  
+  &__upper-wrap {
+    display: flex;
+    flex-direction: column;
+    max-width: 1420px;
+    min-width: 300px;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    
+    @media (min-width: $w700) {
+      display: block;
+      height: 600px;
+    }
+    
+    @media (min-width: $w800) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: 400px;
+    }
+    
+    @media (min-width: $tablet) {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding-top: 140px;
+      width: calc(100% - 40px);
+      height: 265px;
+    }
+  }
+  
+  &__lower-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 320px;
+    min-height: 143px;
+    max-width: $hd;
+    margin: 0 auto;
+    
+    @media (min-width: $w700) {
+      align-content: center;
+      align-items: center;
+      width: calc(100% - 40px);
+      min-height: 161px;
+      max-width: 820px;
+    }
+    
+    @media (min-width: $w960) {
+      max-width: $hd;
+      width: 820px;
+    }
+    
+    @media (min-width: $w1320) {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      width: 100%;
+    }
+  }
+  
+  &__col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 340px;
+    height: 200px;
+    margin: 0 auto;
+    
+    @media (min-width: $tablet) {
+      width: calc(33% - 1px);
+      height: 265px;
+    }
+    
+    &:nth-child(1) {
+      order: 2;
+      height: 137px;
+      
+      @media (min-width: $w700) {
+        order: 0;
+        height: 200px;
+      }
+      
+      @media (min-width: $tablet) {
+        align-items: flex-start;
+        max-width: 429px;
+        border-right: 1px solid $footer-col-border;
+      }
+    }
+    
+    &:nth-child(2) {
+      order: 1;
+      
+      @media (min-width: $w700) {
+        order: 0;
+      }
+      
+      @media (min-width: $tablet) {
+        align-items: center;
+        width: 34%;
+        max-width: 560px;
+      }
+    }
+    
+    &:nth-child(3) {
+      order: 3;
+      height: 137px;
+      padding-bottom: 47px;
+     
+      @media (min-width: $w700) {
+        order: 0;
+        height: 200px;
+        padding-bottom: 0;
+      }
+      
+      @media (min-width: $tablet) {
+        align-items: flex-end;
+        max-width: 429px;
+        border-left: 1px solid $footer-col-border;
+      }
+    }
+  }
+  
+  &__heading {
+    padding: 0;
+    margin: 0;
+    margin-top: 48px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    color: $dark-section-text;
+    
+    @media (min-width: $w700) {
+      margin-top: 78px;
+      font-size: 23px;
+      text-transform: uppercase;
+    }
+  }
+  
+  &__col:nth-child(2) &__heading {
+    margin-top: 78px;
+  }
+  
+  &__col:nth-child(3) &__heading {
+    @media (min-width: $tablet) {
+      margin-right: 18px;
+    }
+  }
+  
+  &__col:nth-child(1) &__heading {
+    @media (min-width: $tablet) {
+      margin-left: 23px;
+    }
+  }
+  
+  & .download {
+    margin-top: 25px;
+    
+    @media (min-width: $w700) {
+      margin-top: 32px;
+      margin-left: 26px;
+    }
+  }
+  
+  & .social-links {
+    margin-top: 18px;
+    
+    @media (min-width: $w700) {
+      margin-top: 26px;
+    }
+    
+    @media (min-width: $tablet) {
+      margin-right: 50px;
+    }
+  }
+
+  &__question {
+    margin-top: 11px;
+    
+    @media (min-width: $w700) {
+      margin-top: 32px;
+    }
+  }
+  
+  &__question-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: $footer-question-text;
+    
+    @media (min-width: $w700) {
+      font-size: 16px;
+    }
+    
+    @media (min-width: $tablet) {
+      margin-left: 11px;
+    }
+  }
+  
+  &__question-email {
+    display: block;
+    margin-top: 13px;
+    padding-right: 16px;
+    font-size: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    color: $footer-email;
+    transition: all 0.3s ease-in-out;
+    
+    @media (min-width: $w700) {
+      margin-top: 21px;
+      padding-right: 0;
+      font-size: 12px;
+    }
+    
+    &:hover {
+      color: $footer-email-hvr;
+    }
+  }
+  
+  &__question-symbol {
+    margin-right: 9px;
+    fill: currentColor;
+    
+    @media (min-width: $w700) {
+      margin-right: 7px;
+    }
+  }
+  
+  &__copyright {
+    width: 100px;
+    margin-left: 22px;
+    margin-top: 19px;
+    margin-bottom: 40px;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    color: $footer-copyright;
+    order: 2;
+    
+    @media (min-width: $w700) {
+      width: auto;
+      margin-top: 56px;
+      margin-left: 0;
+      font-size: 14px;
+    }
+    
+    @media (min-width: $w1320) {
+      min-width: 245px;
+      margin-left: 30px;
+      margin-right: 8%;
+      order: 0;
+    }
+
+    @media (min-width: $w1420) {
+      margin-left: 4.58%;
+      margin-right: 11.462%;
+    }
+  }
+  
+  &__copyright-string {
+    display: block;
+    
+    @media (min-width: $w700) {
+      display: inline;
+    }
+  }
+  
+  &__up-btn {
+    width: 54px;
+    height: 25px;
+    margin-top: 7px;
+    margin-right: 22px;
+    padding-top: 20px;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: $up-btn;
+    background-color: $up-btn-back;
+    order: 3;
+    transition: all 0.3s ease-in-out;
+    
+    @media (min-width: $w700) {
+      width: 63px;
+      height: 30px;
+      margin-top: 22px;
+      padding-top: 22px;
+      margin-right: 0;
+      font-size: 9px;
+    }
+    
+    @media (min-width: $w1320) {
+      margin-right: 20px;
+      margin-top: 16px;
+      order: 0;
+    }
+    
+    &:hover {
+      background-color: $social-links-hover;
+    }
+  }
+}

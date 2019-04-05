@@ -1,0 +1,208 @@
+.main-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1420px;
+  width: calc(100% - 48px);
+  min-width: 280px;
+  height: 66px;
+  margin: 0 auto;
+  
+  @media (min-width: $w700) {
+    width: calc(100% - 50px);
+    margin-left: 25px;
+    height: 154px;
+  }
+  
+  @media (min-width: $w960) {
+    width: calc(100% - 140px);
+    margin-left: 100px;
+  }
+    
+  @media (min-width: $tablet) {
+    width: calc(100% - 190px);
+    margin-left: 155px;
+  }
+  
+  @media (min-width: $w1420) {
+    width: calc(100% - 290px);
+    margin-left: 250px;
+  }
+  
+  &__nav-open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    margin-top: 4px;
+    margin-right: -14px;
+    font-size: 0;
+    color: $dark-section-text;
+    transition: all 0.3s ease-in-out;
+  
+    @media (min-width: $w700) {
+      display: none;
+    }
+  
+    &:hover {
+      color: $main-header-hvr;
+    }
+  }
+  
+  &__open-symbol {
+    fill: currentColor;
+  }
+  
+  &__nav-open_closed &__open-symbol_burger {
+    display: block;
+  }
+  
+  &__nav-open_closed &__open-symbol_cross {
+    display: none;
+  }
+  
+  &__nav-open_opened &__open-symbol_burger {
+    display: none;
+  }
+  
+  &__nav-open_opened &__open-symbol_cross {
+    display: block;
+  }
+  
+  &_light &__nav-open {
+    color: $header-light-main-text;
+  }
+  
+  &_light &__nav-open:hover {
+    color: $main-header-hvr;
+  }
+  
+  &__logo {
+    display: block;
+    width: 29px;
+    height: 21px;
+    font-size: 0;
+    text-decoration: none;
+
+    @media (min-width: $w700) {
+      width: 158px;
+      height: 29px;
+    }
+  }
+  
+  &__logo-img {
+    width: 29px;
+    height: 21px;
+    
+    @media (min-width: $w700) {
+      width: 158px;
+      height: 29px;
+    }
+  }
+  
+  &__links-wrap {
+    position: absolute;
+    width: calc(100% + 40px);
+    z-index: 20;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    display: none;
+    left: -20px;
+    top: 91px;
+    height: 240px;
+    background-color: $dark-section-back;
+    border-bottom: 1px solid $footer-col-border;
+    border-top: 1px solid $footer-col-border;
+
+    @media (min-width: $w700) {
+      position: static;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 376px;
+      height: auto;
+      margin-top: 2px;
+      border-bottom: none;
+      border-top: none;
+      background-color: transparent;
+    }
+    
+    @media (min-width: $w800) {
+      width: 414px;
+    }
+    
+    &_opened {
+      display: flex;
+    }
+
+    &_closed {
+      display: none;
+
+      @media (min-width: $w700) {
+        display: flex;
+      }
+    }
+  }
+  
+  &_light &__links-wrap {
+    background-color: $section-back;
+    border-bottom: none;
+    border-top: none;
+
+    @media (min-width: $w700) {
+      background-color: transparent;
+    }
+  }
+  
+  &__link {
+    font-size: 17px;
+    font-weight: 400;
+    text-decoration: none;
+    color: $dark-section-text;
+    transition: all 0.3s ease-in-out;
+    
+    &:hover {
+      color: $main-header-hvr;
+    }
+    
+    &_reg {
+      width: 192px;
+      height: 41px;
+      padding-top: 24px;
+      text-align: center;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 192px 65px;
+      background-image: url('../images/reg-outline.png');
+      
+      @media (min-width: $w800) {
+        margin-right: 38px;
+      }
+    }
+  }
+  
+  &_light &__link {
+    color: $header-light-text;
+  }
+ 
+  &_light &__link:hover {
+    color: $main-header-hvr;
+  }
+  
+  &_light &__link_reg {
+    color: $reg-link;
+  }
+  
+  &_light &__link_reg:hover {
+    color: $reg-link;
+    opacity: 0.7;
+  }
+  
+  &__link-symbol {
+    margin-right: 13px;
+    fill: currentColor;
+  }
+}

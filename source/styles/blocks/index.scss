@@ -1,0 +1,419 @@
+.index {
+  display: block;
+  width: 100%;
+  
+  &__how {
+    position: relative;
+    display: block;
+    max-width: $hd;
+    min-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    
+    @media (min-width: $w700) {
+      min-height: 710px;
+    }
+    
+    @media (min-width: $w1320) {
+      position: static;
+      display: flex;
+    }
+    
+    &:before {
+      position: absolute;
+      z-index: 1;
+      display: block;
+      content: '';
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 38px);
+      height: 8px;
+      background-color: $how-cards-border;
+      
+      @media (min-width: $w1320) {
+        display: none;
+      }
+    }
+  }
+  
+  &__how-sidebar {
+    width: 100%;
+    height: 88px;
+    
+    @media (min-width: $w700) {
+      height: 150px;
+    }
+    
+    @media (min-width: $w1320) {
+      position: relative;
+      width: 155px;
+      height: auto;
+    }
+    
+    @media (min-width: $w1420) {
+      width: 250px;
+    }
+    
+    &:before {
+      position: absolute;
+      z-index: 1;
+      display: none;
+      content: '';
+      top: -123px;
+      left: 81px;
+      width: 1px;
+      height: 123px;
+      background-color: #282828;
+      
+      @media (min-width: $w1320) {
+        display: block;
+      }
+
+      @media (min-width: $w1420) {
+        left: 122px;
+      }
+    }
+    
+    &:after {
+      position: absolute;
+      z-index: 1;
+      display: none;
+      content: '';
+      top: 0;
+      left: 81px;
+      width: 1px;
+      height: 219px;
+      background-color: $todo-questions-line;
+      
+      @media (min-width: $w1320) {
+        display: block;
+      }
+
+      @media (min-width: $w1420) {
+        left: 122px;
+      }
+    }
+  }
+  
+  &__how-title {
+    padding: 0;
+    margin: 0;
+    padding-top: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-align: center;
+    
+    @media (min-width: $w700) {
+      margin-left: 25px;
+      padding-top: 90px;
+      font-size: 22px;
+      text-align: left;
+    }
+    
+    @media (min-width: $w1320) {
+      display: block;
+      position: absolute;
+      top: 444px;
+      left: 73px;
+      width: 220px;
+      margin: 0;
+      padding: 0;
+      font-size: 15px;
+      font-weight: 500;
+      transform: rotate(270deg);
+      transform-origin: 0 0;
+    }
+
+    @media (min-width: $w1420) {
+      left: 114px;
+    }
+  }
+  
+  &__how-titl-no-mob {
+    display: none;
+    
+    @media (min-width: $w700) {
+      display: inline;
+    }
+  }
+  
+  &__how-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1420px;
+    min-width: 308px;
+    width: calc(100% - 12px);
+    margin: 0 auto;
+    
+    @media (min-width: $w700) {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-content: space-between;
+      height: 442px;
+      width: 100%;
+    }
+    
+    @media (min-width: $w1200) {
+      justify-content: center;
+    }
+    
+    @media (min-width: $w1320) {
+      position: relative;
+      justify-content: space-between;
+      width: calc(100% - 155px);
+      height: auto;
+      margin: 0;
+    }
+    
+    @media (min-width: $w1420) {
+      width: calc(100% - 250px);
+    }
+    
+    &:before {
+      position: absolute;
+      z-index: 1;
+      display: none;
+      content: '';
+      top: -8px;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background-color: $how-cards-border;
+      
+      @media (min-width: $w1320) {
+        display: block;
+      }
+    }
+  }
+  
+  &__todo {
+    max-width: $hd;
+    min-width: 320px;
+    margin: 0 auto;
+  }
+  
+  &__withdraw {
+    min-width: 320px;
+    max-width: $hd;
+    margin: 0 auto;
+    
+    @media (min-width: $tablet) {
+      min-height: 650px;
+    }
+    
+    @media (min-width: $w1320) {
+      min-height: 880px;
+    }
+    
+    & .section-heading {
+      padding-top: 54px;
+      
+      @media (min-width: $w700) {
+        padding-top: 75px;
+      }
+      
+      @media (min-width: $tablet) {
+        padding-top: 105px;
+      }
+      
+      @media (min-width: $w1320) {
+        padding-top: 217px;
+      }
+    }
+  }
+  
+  &__withdraw-content {
+    display: block;
+    max-width: 1420px;
+    //- min-width: 308px;
+    width: 100%;
+    margin: 35px 0 0;
+    
+    @media (min-width: $w700) {
+      //- width: calc(100% - 35px);
+      margin-top: 40px;
+      //- margin-left: 25px;
+    }
+
+    @media (min-width: $w960) {
+      width: calc(100% - 45px);
+      margin-left: 35px;
+    }
+    
+    @media (min-width: $tablet) {
+      display: flex;
+      justify-content: space-between;
+      margin: 80px auto 0;
+    }
+  }
+  
+  &__withdraw-wrap {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    width: calc(100% - 66px);
+    margin: 0 auto 64px;
+    
+    @media (min-width: $w700) {
+      width: calc(100% - 91px);
+      margin-left: 58px;
+    }
+    
+    @media (min-width: $tablet) {
+      max-width: 460px;
+      width: 34.86%;
+      margin: 0;
+    }
+    
+    @media (min-width: $w1320) {
+      justify-content: space-between;
+      height: 295px;
+    }
+  }
+  
+  &__safe {
+    //- min-height: 1450px;
+    max-width: $hd;
+    min-width: 320px;
+    margin: 0 auto;
+    color: $dark-section-text;
+    background-color: $dark-section-back;
+    
+    @media (min-width: $w760) {
+      min-height: 740px;
+    }
+    
+    @media (min-width: $tablet) {
+      min-height: 810px;
+    }
+    
+    @media (min-width: $w1420) {
+      min-height: 874px;
+    }
+    
+    & .section-heading {
+      padding-top: 49px;
+      
+      @media (min-width: $w700) {
+        padding-top: 80px;
+      }
+      
+      @media (min-width: $tablet) {
+        padding-top: 168px;
+      }
+    }
+  }
+  
+  &__safe-content {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    max-width: 1420px;
+    width: 100%;
+    margin: 44px auto 0;
+    
+    @media (min-width: $w700) {
+      margin: 0 auto;
+    }
+    
+    @media (min-width: $w760) {
+      width: calc(100% - 20px);
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    @media (min-width: $w1200) {
+      justify-content: space-around;
+    }
+    
+    @media (min-width: $w1460) {
+      justify-content: space-between;
+    }
+  }
+  
+  &__computer {
+    max-width: $hd;
+    margin: 0 auto;
+    
+    @media (min-width: $w1420) {
+      min-height: 656px;
+    }
+  }
+  
+  &__earn {
+    //- min-height: 1800px;
+    min-width: 320px;
+    width: 100%;
+    max-width: $hd;
+    margin: 0 auto;
+    
+    @media (min-width: $w960) {
+      min-height: 760px;
+    }
+    
+    @media (min-width: $tablet) {
+      min-height: 958px;
+    }
+    
+    & .section-heading {
+      padding-top: 50px;
+      padding-bottom: 20px;
+      
+      @media (min-width: $w700) {
+        padding-top: 70px;
+        padding-bottom: 40px;
+      }
+      
+      @media (min-width: $tablet) {
+        padding-top: 118px;
+        padding-bottom: 88px;
+      }
+    }
+  }
+  
+  &__earn-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1420px;
+    min-width: 320px;
+    width: 100%;
+    margin: 0 auto 110px;
+    
+    @media (min-width: $w700) {
+      margin: 0 auto 140px;
+    }
+    
+    @media (min-width: $w960) {
+      flex-direction: row;
+      justify-content: center;
+      height: 1000px;
+      width: calc(100% - 20px);
+      height: auto;
+      margin-bottom: 0;
+    }
+  }
+  
+  &__bottom-banner {
+    display: block;
+    width: 100%;
+    min-width: 320px;
+    max-width: 1420px;
+    margin: 0 auto;
+    
+    @media (min-width: $w960) {
+      display: flex;
+      justify-content: space-around;
+    }
+    
+    @media (min-width: $tablet) {
+      justify-content: flex-start;
+    }
+    
+    @media (min-width: $w1460) {
+      min-height: 230px;
+    }
+  }
+}

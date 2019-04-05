@@ -1,0 +1,22 @@
+.wrapper {
+  width: 100%;
+  color: $dark-section-text;
+  background-color: $dark-section-back;
+  
+  &_header {
+    background-repeat: repeat;
+    background-image: url('../images/pattern.png');
+  }
+  
+  &_footer-int {
+    background-repeat: repeat;
+    background-image: url('../images/pattern.png');
+    border-bottom: 1px solid $footer-lower-border;
+  }
+  
+  &_bottom {
+    color: $text-color;
+    background-color: $page-color;
+    border-top: 1px solid $bottom-card-border;
+  }
+}

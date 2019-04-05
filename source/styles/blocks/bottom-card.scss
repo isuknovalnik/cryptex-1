@@ -1,0 +1,124 @@
+.bottom-card {
+  display: block;
+  //- min-width: 308px;
+  width: calc(100% - 60px);
+  margin: 0 auto;
+  padding: 0;
+  
+  @media (min-width: $w700) {
+    width: calc(100% - 35px);
+    margin-left: 25px;
+  }
+  
+  @media (min-width: $w960) {
+    width: 50%;
+    margin: 0;
+  }
+  
+  @media (min-width: $w1460) {
+    height: 229px;
+  }
+  
+  &_pict {
+    display: none;
+    
+    @media (min-width: $w700) {
+      display:block;
+    }
+    
+    @media (min-width: $w960) {
+      width: 40%;
+    }
+    
+    @media (min-width: $tablet) {
+      width: calc(50% - 1px);
+      border-left: 1px solid $bottom-card-border;
+      background-repeat: no-repeat;
+      background-image: url('../images/twain.svg');
+      background-size: 82px 86px;
+      background-position: 84px 62px;
+    }
+  }
+  
+  &__title {
+    padding: 0;
+    margin: 0;
+    padding-top: 46px;
+    padding-bottom: 11px;
+    font-size: 12px;
+    font-weight: 600;
+    color: $bottom-card-title;
+    
+    @media (min-width: $w700) {
+      padding-top: 49px;
+      padding-bottom: 17px;
+      font-size: 21px;
+    }
+    
+    @media (min-width: $tablet) {
+      margin-left: 20px;
+    }
+    
+    @media (min-width: $w1460) {
+      margin-left: 0;
+    }
+  }
+  
+  &_pict &__title {
+    @media (min-width: $tablet) {
+      margin-left: 230px;
+    }
+  }
+  
+  &__text {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 46px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
+    color: $section-text;
+    
+    @media (min-width: $w700) {
+      padding-bottom: 0;
+      font-size: 17px;
+      line-height: 30px;
+    }
+    
+    @media (min-width: $w960) {
+      padding-bottom: 50px;
+    }
+    
+    @media (min-width: $tablet) {
+      margin-left: 20px;
+      margin-right: 20px;
+      max-width: 630px;
+    }
+    
+    @media (min-width: $w1460) {
+      width: 630px;
+      padding-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  
+  &_pict &__text {
+    padding-bottom: 50px;
+    
+    @media (min-width: $tablet) {
+      width: calc(100% - 250px);
+      max-width: 410px;
+      margin-left: 230px;
+    }
+    
+    @media (min-width: $w1460) {
+      padding-bottom: 0;
+      width: 410px;
+    }
+  }
+  
+  &__light-text {
+    color: $light-text;
+  }
+}
